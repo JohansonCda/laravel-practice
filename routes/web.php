@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SaludoController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ImagenController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,8 @@ Route::get('/contacto', function(){
 });
 
 Route::post('/enviar-contacto', [ContactoController::class,'enviar']);
+
+Route::get('/subir-imagen', function(){
+    return view('subirImagen');
+});
+Route::post('/subir-imagen', [ImagenController::class,'subirImagen']);

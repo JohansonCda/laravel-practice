@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    @if ($errors)
+    @if ($errors->any())
         <ul>
             @foreach ($errors->all() as $error)
                 <li style="color:red">{{ $error }}</li>
